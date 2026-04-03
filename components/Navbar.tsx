@@ -62,7 +62,7 @@ export default function Navbar() {
             {/* Nav links */}
             <div className="flex items-center">
               {navLinks.map(({ href, label }) => {
-                const active = pathname === href;
+                const active = pathname === href.split('#')[0];
                 return (
                   <Link
                     key={href}
