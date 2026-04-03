@@ -53,7 +53,7 @@ export default function AboutPage() {
             >
               <span className="section-label !text-brand-red">Sales Agent</span>
               <h1 className="text-[clamp(2.4rem,5vw,4rem)] font-black text-white leading-[1.0] tracking-tight mt-2 mb-6">
-                Juan dela Cruz
+                RICHELE DULIG
               </h1>
               <p className="text-neutral-400 text-[15px] leading-relaxed max-w-md font-light mb-8">
                 Dedicated Toyota sales professional with over 8 years of experience helping
@@ -65,7 +65,7 @@ export default function AboutPage() {
               <div className="flex flex-col gap-3 mb-10">
                 {[
                   { icon: Phone, text: '+63 917 123 4567' },
-                  { icon: Mail, text: 'juan@toyotamotors.ph' },
+                  { icon: Mail, text: 'richele@toyotamotors.ph' },
                   { icon: MapPin, text: '123 Dealership Blvd, Makati City' },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-3 text-[14px] text-neutral-400">
@@ -108,7 +108,7 @@ export default function AboutPage() {
                   {/* Replace src with agent photo */}
                   <img
                     src="/about/agent.jpg"
-                    alt="Juan dela Cruz — Sales Agent"
+                    alt="Richele Dulig — Sales Agent"
                     className="w-full h-full object-cover object-top"
                     onError={(e) => {
                       // fallback placeholder when no photo yet
@@ -120,7 +120,7 @@ export default function AboutPage() {
 
                   {/* Name tag overlay */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-5">
-                    <p className="text-white font-bold text-[15px]">Juan dela Cruz</p>
+                    <p className="text-white font-bold text-[15px]">Richele Dulig</p>
                     <p className="text-brand-red text-[11px] font-semibold uppercase tracking-widest mt-0.5">
                       Senior Sales Consultant
                     </p>

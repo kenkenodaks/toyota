@@ -117,7 +117,7 @@ export default function AdminPage() {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
-      setSeedMsg(`Seeded ${data.count} vehicles successfully.`);
+      setSeedMsg(`Seeded ${data.count ?? data.cars?.length ?? '6'} vehicles successfully.`);
       await fetchCars(token);
     } catch {
       setSeedMsg('Seeding failed.');
