@@ -3,6 +3,10 @@
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Award, Users, Car, Star, Instagram, Facebook, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Hero from '@/components/Hero';
+import FeaturedCars from '@/components/FeaturedCars';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import { useEffect, useState } from 'react';
 
 const stats = [
   { value: '8+', label: 'Years Experience' },
@@ -37,6 +41,13 @@ const testimonials = [
 ];
 
 export default function AboutPage() {
+  const [featuredCars, setFeaturedCars] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch('/api/cars')
+      .then((r) => r.json())
+      .then((data) => setFeaturedCars(Array.isArray(data) ? data.filter((c: any) => c.featured) : []));
+  }, []);
   return (
     <div className="min-h-screen bg-white pt-[84px] lg:pt-[96px]">
 
@@ -301,6 +312,11 @@ export default function AboutPage() {
           </div>
         </motion.div>
       </section>
+
+      {/* ── HOMEPAGE SECTIONS ── */}
+      <Hero />
+      <FeaturedCars cars={featuredCars} />
+      <WhyChooseUs />
 
     </div>
   );
