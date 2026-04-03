@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "c:\\Users\\Acer\\Desktop\\Richele\\app\\api\\cars"
+    ],
+    "allow": [
+      "Bash(gh auth:*)"
+    ]
+  }
+}
