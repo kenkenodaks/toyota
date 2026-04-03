@@ -8,6 +8,7 @@ import { Menu, X } from 'lucide-react';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [contactVisible, setContactVisible] = useState(false);
   const pathname = usePathname();
   const isHome = false;
 
@@ -16,6 +17,17 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  useEffect(() => {
+    const el = document.getElementById('contact');
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setContactVisible(entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [pathname]);
 
   const navLinks = [
     { href: '/about', label: 'Home' },
@@ -62,7 +74,10 @@ export default function Navbar() {
             {/* Nav links */}
             <div className="flex items-center">
               {navLinks.map(({ href, label }) => {
-                const active = pathname === href.split('#')[0];
+                const isContact = href.includes('#contact');
+                const active = isContact
+                  ? contactVisible
+                  : !contactVisible && pathname === href.split('#')[0];
                 return (
                   <Link
                     key={href}
