@@ -286,32 +286,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="py-20 border-t border-neutral-100 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <span className="section-label block text-center">Ready?</span>
-          <h2 className="section-title mb-4">Let's Find Your Car</h2>
-          <p className="text-neutral-400 text-[14px] mb-8 font-light">
-            Reach out directly or browse the full inventory.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <a
-              href="tel:+639171234567"
-              className="btn-primary !bg-brand-red"
-            >
-              <Phone size={14} /> Call Now
-            </a>
-            <Link href="/cars" className="btn-primary !bg-[#0A0A0A]">
-              <Car size={14} /> View Inventory
-            </Link>
-          </div>
-        </motion.div>
-      </section>
 
       {/* ── HOMEPAGE SECTIONS ── */}
       <Hero />
