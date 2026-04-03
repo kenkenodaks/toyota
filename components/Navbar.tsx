@@ -9,7 +9,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === '/';
+  const isHome = pathname === '/' || pathname === '/about';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -18,10 +18,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '/about', label: 'About' },
+    { href: '/about', label: 'Home' },
     { href: '/cars', label: 'Inventory' },
-    { href: '/', label: 'Home' },
-    { href: '/#contact', label: 'Contact' },
+    { href: '/about#contact', label: 'Contact' },
   ];
 
   const transparent = isHome && !scrolled && !menuOpen;
@@ -38,7 +37,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-[76px] lg:h-[82px]">
 
           {/* ── Brand ── */}
-          <Link href="/" className="shrink-0 group">
+          <Link href="/about" className="shrink-0 group">
             <div className="flex items-baseline gap-3">
               <span className={`text-[28px] lg:text-[32px] font-black tracking-[-0.01em] transition-colors duration-300 ${
                 transparent ? 'text-white' : 'text-brand-red'
