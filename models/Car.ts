@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document, Model } from 'mongoose';
+import mongoose, { Schema, Document, Model, Types } from 'mongoose';
 
 export interface ICarSpecs {
   engine: string;
@@ -10,7 +10,7 @@ export interface ICarSpecs {
 }
 
 export interface ICar extends Document {
-  _id: string;
+  _id: Types.ObjectId;
   name: string;
   price: number;
   images: string[];
