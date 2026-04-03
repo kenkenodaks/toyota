@@ -9,7 +9,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === '/' || pathname === '/about';
+  const isHome = false;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
