@@ -71,28 +71,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* ── Stats strip ── */}
-      <motion.div
-        className="relative z-10 bg-black/50 backdrop-blur-md border-t border-white/8"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 grid grid-cols-3 divide-x divide-white/10">
-          {[
-            { value: '500+', label: 'Vehicles Available' },
-            { value: '12 Yrs', label: 'In Business' },
-            { value: '5,000+', label: 'Happy Customers' },
-          ].map((s) => (
-            <div key={s.label} className="text-center px-4">
-              <div className="text-[22px] font-black text-white tracking-tight">{s.value}</div>
-              <div className="text-[10px] text-white/40 uppercase tracking-[0.18em] mt-0.5 font-medium">
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
     </section>
   );
 }
