@@ -32,7 +32,6 @@ export default function Navbar() {
   const navLinks = [
     { href: '/about', label: 'Home' },
     { href: '/cars', label: 'Inventory' },
-    { href: '/about#contact', label: 'Contact' },
   ];
 
   const transparent = isHome && !scrolled && !menuOpen;
