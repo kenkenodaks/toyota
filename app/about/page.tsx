@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Award, Users, Car, Star, Instagram, Facebook, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Award, Car, Star, Instagram, Facebook, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
 import FeaturedCars from '@/components/FeaturedCars';
@@ -162,13 +162,6 @@ export default function AboutPage() {
                     className="w-full h-full object-cover object-top"
                     onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
                   />
-                  {/* Placeholder */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                    <div className="w-24 h-24 rounded-full bg-neutral-700 flex items-center justify-center">
-                      <Users size={36} className="text-neutral-500" strokeWidth={1} />
-                    </div>
-                    <code className="text-[11px] text-neutral-600 bg-neutral-900 px-3 py-1">public/about/agent.jpg</code>
-                  </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-5">
                     <p className="text-white font-bold text-[15px]">Richele Dulig</p>
                     <p className="text-brand-red text-[11px] font-semibold uppercase tracking-widest mt-0.5">Senior Sales Consultant</p>
