@@ -52,35 +52,8 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white pt-[84px] lg:pt-[96px]">
 
-      {/* ── INTRO — text only ── */}
-      <section className="bg-[#0A0A0A] py-20 lg:py-28 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65 }}
-            className="max-w-2xl"
-          >
-            <span className="section-label !text-brand-red">Sales Agent</span>
-            <h1 className="text-[clamp(2.4rem,5vw,4rem)] font-black text-white leading-[1.0] tracking-tight mt-2 mb-6">
-              RICHELE DULIG
-            </h1>
-            <p className="text-neutral-400 text-[15px] leading-relaxed max-w-md font-light mb-8">
-              Dedicated Toyota sales professional with over 8 years of experience helping
-              customers find their perfect vehicle. Known for honest advice, deep product
-              knowledge, and building lifelong relationships — not just one-time sales.
-            </p>
-            <div className="flex gap-3">
-              <a href="#" className="flex items-center gap-2 px-4 py-2.5 border border-neutral-700 text-[12px] font-semibold text-neutral-400 hover:text-white hover:border-neutral-500 transition-colors uppercase tracking-widest">
-                <Facebook size={13} /> Facebook
-              </a>
-              <a href="#" className="flex items-center gap-2 px-4 py-2.5 border border-neutral-700 text-[12px] font-semibold text-neutral-400 hover:text-white hover:border-neutral-500 transition-colors uppercase tracking-widest">
-                <Instagram size={13} /> Instagram
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      {/* ── INTRO — Hero ── */}
+      <Hero />
 
       {/* ── STATS ── */}
       <section className="border-b border-neutral-100">
@@ -158,7 +131,6 @@ export default function AboutPage() {
       </section>
 
       {/* ── CAR SHOWCASE ── */}
-      <Hero />
       <FeaturedCars cars={featuredCars} />
       <WhyChooseUs />
 
