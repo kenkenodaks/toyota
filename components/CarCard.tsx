@@ -83,7 +83,7 @@ export default function CarCard({ _id, name, price, images, specs, badge }: CarC
             <span>{specs.seats}S</span>
           </div>
           <span className="text-[15px] font-black text-[#0A0A0A] tracking-tight">
-            ${price.toLocaleString()}
+            ₱{price.toLocaleString()}
           </span>
         </div>
       </div>

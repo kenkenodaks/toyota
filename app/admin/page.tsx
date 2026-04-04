@@ -163,7 +163,7 @@ export default function AdminPage() {
             { label: 'Total Vehicles', value: cars.length, icon: Car, color: 'text-blue-500', bg: 'bg-blue-50' },
             { label: 'Featured', value: cars.filter((c) => c.featured).length, icon: Star, color: 'text-yellow-500', bg: 'bg-yellow-50' },
             { label: 'Inquiries', value: inquiries.length, icon: MessageSquare, color: 'text-green-500', bg: 'bg-green-50' },
-            { label: 'Avg. Price', value: cars.length ? `$${Math.round(cars.reduce((a, c) => a + (c.price as number), 0) / cars.length).toLocaleString()}` : '—', icon: Car, color: 'text-purple-500', bg: 'bg-purple-50' },
+            { label: 'Avg. Price', value: cars.length ? `₱${Math.round(cars.reduce((a, c) => a + (c.price as number), 0) / cars.length).toLocaleString()}` : '—', icon: Car, color: 'text-purple-500', bg: 'bg-purple-50' },
           ].map((stat) => (
             <div key={stat.label} className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
               <div className={`inline-flex items-center justify-center w-10 h-10 rounded-xl ${stat.bg} ${stat.color} mb-3`}>
@@ -284,7 +284,7 @@ export default function AdminPage() {
                               </div>
                             </td>
                             <td className="py-4 px-4 font-semibold text-gray-800">
-                              ${(car.price as number).toLocaleString()}
+                              ₱{(car.price as number).toLocaleString()}
                             </td>
                             <td className="py-4 px-4 text-gray-500 hidden md:table-cell">
                               {car.specs?.fuel ?? '—'}

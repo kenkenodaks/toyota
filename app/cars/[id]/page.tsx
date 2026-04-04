@@ -88,7 +88,7 @@ export default async function CarDetailPage({ params }: Props) {
               </h1>
               <div className="mt-3 flex items-baseline gap-2">
                 <span className="text-3xl font-bold text-brand-red">
-                  ${car.price.toLocaleString()}
+                  ₱{car.price.toLocaleString()}
                 </span>
                 <span className="text-gray-400 text-sm">Starting price</span>
               </div>

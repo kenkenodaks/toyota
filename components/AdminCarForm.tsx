@@ -156,7 +156,7 @@ export default function AdminCarForm({ car, token, onSuccess, onClose }: Props) 
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
-              <label className="form-label">Price (USD) *</label>
+              <label className="form-label">Price (PHP) *</label>
               <input
                 className="form-input"
                 type="number"
