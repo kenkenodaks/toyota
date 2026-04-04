@@ -52,10 +52,10 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white pt-[84px] lg:pt-[96px]">
 
-      {/* ── INTRO — Hero ── */}
+      {/* ── 1. HERO ── */}
       <Hero />
 
-      {/* ── STATS ── */}
+      {/* ── 2. STATS ── */}
       <section className="border-b border-neutral-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-neutral-100">
@@ -69,7 +69,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── ABOUT + ACHIEVEMENTS ── */}
+      {/* ── 3. FEATURED CARS + WHY CHOOSE US ── */}
+      <FeaturedCars cars={featuredCars} />
+      <WhyChooseUs />
+
+      {/* ── 4. MY STORY + ACHIEVEMENTS ── */}
       <section className="py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-20">
@@ -106,7 +110,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ── */}
+      {/* ── 5. TESTIMONIALS ── */}
       <section className="bg-[#0A0A0A] py-24 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-14">
@@ -130,15 +134,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── CAR SHOWCASE ── */}
-      <FeaturedCars cars={featuredCars} />
-      <WhyChooseUs />
-
-      {/* ── CONTACT — photo + info (last section) ── */}
+      {/* ── 6. CONTACT — photo + info ── */}
       <section className="bg-[#0A0A0A] py-24 lg:py-28" id="contact">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-          {/* Section label */}
           <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="mb-14">
             <span className="section-label !text-brand-red">Contact</span>
             <h2 className="section-title !text-white">Get In Touch</h2>
